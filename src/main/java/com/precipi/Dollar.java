@@ -1,6 +1,6 @@
 package com.precipi;
 
-class Dollar {
+class Dollar extends Money{
     public int amount;
     public Dollar(int amount) {
         this.amount = amount;
