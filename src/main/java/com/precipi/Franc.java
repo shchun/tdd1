@@ -1,12 +1,13 @@
 package com.precipi;
 
 public class Franc extends Money {
-    public Franc(int amount) {
-        this.amount = amount;
+    private String currency;
+
+    public Franc(int amount, String currency) {
+        super(amount, currency);
     }
 
     public Money times(int rval) {
-        return new Franc(amount * rval);
+        return Money.franc(amount * rval);
     }
-
 }
