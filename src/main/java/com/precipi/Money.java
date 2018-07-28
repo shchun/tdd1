@@ -1,6 +1,6 @@
 package com.precipi;
 
-abstract public class Money {
+public class Money {
     protected int amount;
 
     public Money(int amount, String currency) {
@@ -12,17 +12,25 @@ abstract public class Money {
     {
         Money money = (Money) object;
 
-        return amount == money.amount && getClass().equals(money.getClass());
+        return amount == money.amount && 
+           currency.equals(money.currency);
     }
 
-    public abstract Money times(int rval);
-
-    static Dollar dollar(int amount) {
-        return new Dollar(amount, "USD");
+    public Money times(int rval) {
+        return new Money(amount * rval, currency);
+   
+    }
+    
+    public String toString() {
+        return amount + " " + currency;
     }
 
-    static Franc franc(int amount) {
-        return new Franc(amount, "CHF");
+    static Money dollar(int amount) {
+        return new Money(amount, "USD");
+    }
+
+    static Money franc(int amount) {
+        return new Money(amount, "CHF");
     }
 
     protected String currency;
