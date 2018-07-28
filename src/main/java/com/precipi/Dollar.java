@@ -1,8 +1,7 @@
 package com.precipi;
 
-class Dollar extends Money{
-    public int amount;
-    public Dollar(int amount) {
+public class Dollar extends Money{
+     public Dollar(int amount) {
         this.amount = amount;
     }
 
@@ -10,10 +9,5 @@ class Dollar extends Money{
         return new Dollar(amount * rval);
     }
 
-    public boolean equals(Object object) 
-    {
-        Dollar dollar = (Dollar) object;
 
-        return amount == dollar.amount;
-    }
 }

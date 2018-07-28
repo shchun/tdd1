@@ -1,7 +1,6 @@
 package com.precipi;
 
-class Franc extends Money {
-    public int amount;
+public class Franc extends Money {
     public Franc(int amount) {
         this.amount = amount;
     }
@@ -10,10 +9,4 @@ class Franc extends Money {
         return new Franc(amount * rval);
     }
 
-    public boolean equals(Object object) 
-    {
-        Franc Franc = (Franc) object;
-
-        return amount == Franc.amount;
-    }
 }
