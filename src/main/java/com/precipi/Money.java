@@ -16,6 +16,11 @@ public class Money implements Expression {
            currency.equals(money.currency);
     }
 
+    public Money reduce(Bank bank, String to) {
+
+        return new Money(amount/bank.rate(currency, to), to);
+
+    }
     public Expression plus(Money rval) {
         return new Sum(this, rval);
     }
