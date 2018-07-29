@@ -21,10 +21,10 @@ public class Money implements Expression {
         return new Money(amount/bank.rate(currency, to), to);
 
     }
-    public Expression plus(Money rval) {
+    public Expression plus(Expression rval) {
         return new Sum(this, rval);
     }
-    public Money times(int rval) {
+    public Expression times(int rval) {
         return new Money(amount * rval, currency);
    
     }
