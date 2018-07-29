@@ -16,11 +16,14 @@ public class Money {
            currency.equals(money.currency);
     }
 
+    public Money plus(Money rval) {
+        return new Money(amount + rval.amount, currency);
+    }
     public Money times(int rval) {
         return new Money(amount * rval, currency);
    
     }
-    
+
     public String toString() {
         return amount + " " + currency;
     }
