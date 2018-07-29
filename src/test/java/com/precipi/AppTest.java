@@ -5,7 +5,6 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import org.omg.CORBA.TypeCodePackage.BadKind;
 
 /**
  * Unit test for simple App.
