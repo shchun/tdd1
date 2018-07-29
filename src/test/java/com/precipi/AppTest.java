@@ -70,6 +70,12 @@ public class AppTest
 
         assertEquals(five, sum.augend);
         assertEquals(five, sum.addend);
-        
+
     }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().rate("USD","USD"));
+    }
+
 }
