@@ -1,6 +1,6 @@
 package com.precipi;
 
-public class Money {
+public class Money implements Expression {
     protected int amount;
 
     public Money(int amount, String currency) {
@@ -16,7 +16,7 @@ public class Money {
            currency.equals(money.currency);
     }
 
-    public Money plus(Money rval) {
+    public Expression plus(Money rval) {
         return new Money(amount + rval.amount, currency);
     }
     public Money times(int rval) {

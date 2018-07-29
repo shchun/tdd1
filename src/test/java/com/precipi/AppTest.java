@@ -5,6 +5,7 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
+import org.omg.CORBA.TypeCodePackage.BadKind;
 
 /**
  * Unit test for simple App.
@@ -51,8 +52,14 @@ public class AppTest
 
     @Test
     public void testSimpleAddition() {
-        Money sum=Money.dollar(5).plus(Money.dollar(5));
-        assertEquals(Money.dollar(10), sum);
+        //Money sum=Money.dollar(5).plus(Money.dollar(5));
+        //assertEquals(Money.dollar(10), sum);
+ 
+        Money five = Money.dollar(5);
+        Expression sum= five.plus(five);
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+ 
     }
 
     
